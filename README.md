@@ -15,7 +15,7 @@ From now on until the end of the course, you will code on your own github reposi
 
 - Create a new project with the `sotracteur` as name
 - Make sure your repository is private
-- Once created, add push a README.md file with a title `# Sotracteur` and your login as owner like (replace by your info instead):
+- Once created, add push a README.md file with a title `# Sotracteur` and login of the 2 group members like (replace by your info instead):
 
 ```plain
 // ./README.md
@@ -23,6 +23,7 @@ From now on until the end of the course, you will code on your own github reposi
 
 Owner:
 - student.name <sutend.name@epita.fr>
+- other-sutdent.name <other-student.name@epita.fr>
 ```
 
 - Add teachers as collaborators:
@@ -41,18 +42,19 @@ Owner:
 # From your favourite terminal session
 
 # SSH KEY path can be relative or absolute
-# make sure to replace XX by your student number
-$ ssh -i <path_to_your_ssh_key> ubuntu@studentXX.socra-sigl.fr
+# make sure to replace XX by your group number
+$ ssh -i <path_to_your_ssh_key> ubuntu@groupXX.socra-sigl.fr
 
 # Accept the prompt message (only happens on first SSH connection)
 # You should be connected remotely
 ```
 
-- Add an `AUTHORS.txt` in sigl's user home with your login:
+- Add an `AUTHORS.txt` in sigl's user home with your logins:
 
 ```plain
 # Inside AUTHORS.txt
-* florent.fauchille
+* student.name
+* other-student.name
 ```
 
 ## Step 3: Deploy a first minimal web application
@@ -94,13 +96,13 @@ sudo apt update
 sudo apt install nginx
 ```
 
-- Make sure you can see the default `Welcome to nginx!` page from your browser by visiting your address http://studentXX.socra-sigl.fr (replace XX by your student number)
+- Make sure you can see the default `Welcome to nginx!` page from your browser by visiting your address http://groupXX.socra-sigl.fr (replace XX by your group number)
 
 Deploy your index.html file by replacing default's NGINX html file on your remote server:
 
 ```sh
 # from your local host; make sure it ends with ':'
-$ scp -i <path_to_your_ssh_key> <path_to_your_index.html> sigl@studentXX.socra-sigl.fr:
+$ scp -i <path_to_your_ssh_key> <path_to_your_index.html> sigl@groupXX.socra-sigl.fr:
 ```
 
 Connect with ssh to your remote server, and move your `index.html` to default nginx html's folder:
@@ -111,7 +113,7 @@ Connect with ssh to your remote server, and move your `index.html` to default ng
 $ sudo cp /home/sigl/index.html /var/www/html/index.nginx-debian.html
 ```
 
-You should be all set! You should see your web page at http://studentXX.socra-sigl.fr (replacing XX by your student number)
+You should be all set! You should see your web page at http://groupXX.socra-sigl.fr (replacing XX by your group number)
 
 Congratulation, you just deployed a first minimal version of Sotracteur on internet!
 
