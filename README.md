@@ -110,7 +110,7 @@ Connect with ssh to your remote server, and move your `index.html` to default ng
 ```sh
 # see previous step how to connect with ssh to your machine
 # Once connected, from your remote server:
-$ sudo cp /home/sigl/index.html /var/www/html/index.nginx-debian.html
+$ sudo cp /home/ubuntu/index.html /var/www/html/index.nginx-debian.html
 ```
 
 You should be all set! You should see your web page at http://groupXX.socra-sigl.fr (replacing XX by your group number)
