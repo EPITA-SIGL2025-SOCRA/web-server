@@ -102,7 +102,7 @@ Deploy your index.html file by replacing default's NGINX html file on your remot
 
 ```sh
 # from your local host; make sure it ends with ':'
-$ scp -i <path_to_your_ssh_key> <path_to_your_index.html> sigl@groupXX.socra-sigl.fr:
+$ scp -i <path_to_your_ssh_key> <path_to_your_index.html> ubuntu@groupXX.socra-sigl.fr:
 ```
 
 Connect with ssh to your remote server, and move your `index.html` to default nginx html's folder:
